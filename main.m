@@ -14,6 +14,5 @@ for i = 1:6
   endif
   legend(['SARON',num2str(i),'SL.WAV']);
 endfor
- 
 
 %sound(y,fs,nbits);
