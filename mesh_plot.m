@@ -2,7 +2,6 @@
 
 awal = 1;
 panjang = 8000;
-L = length(y);
 hsl = [];
 
 for i=1:floor(L/panjang)
@@ -11,7 +10,14 @@ for i=1:floor(L/panjang)
   
   b = y(awal:akhir);
   f = fft(b);
+  
   hsl = [hsl abs(f(1:500))];
-endfor
+  
+  %mean_value = mean(abs(f));
+  %threshold  = 1.1*mean_value;
+  %idx_treshold = abs(f) < threshold;
+  %f(idx_treshold) = 0;
+  
+end
 
-mesh(hsl);
+%mesh(hsl);
