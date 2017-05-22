@@ -1,0 +1,20 @@
+sinyal saron sintetik
+a = sin(2*pi*500/48000*(1:100000))
+
+500 itu frequensi
+48000 sampling rate
+100000 panjang
+
+sound(a,48000)
+plot(a)
+
+stationer, amplitudo sama terus
+
+saron itu mengenal ADSR
+Attack, decay, sustain, release
+
+saron = 0.789 e -1.03*10-5  => model saron
+
+saron = saron * a;
+
+TUGAS => membuat sinyal saron sintetik
